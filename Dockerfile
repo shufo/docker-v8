@@ -12,7 +12,7 @@ ENV PATH $PATH:/usr/local/depot_tools
 RUN cd /usr/local/src && fetch v8
 
 # compile v8
-RUN cd /usr/local/src/v8 && make native library=shared snapshot=off -j8
+RUN cd /usr/local/src/v8 && make native library=shared snapshot=off -j4
 
 # install v8
 RUN mkdir -p /usr/local/lib
